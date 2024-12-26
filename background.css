@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
+  
+  .candles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%; /* Wider for smoother scrolling */
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    z-index: -1; /* Send behind main content */
+    animation: scrollBackground 12s linear infinite;
+  }
+  
+  .candle {
+    width: 8px;
+    margin: 0 4px;
+    position: relative;
+    animation: flicker 3s infinite ease-in-out;
+    background-color: var(--candle-color, #00ff00); /* Default green */
+  }
+  
+  .candle.red {
+    --candle-color: #ff0000;
+  }
+  
+  .candle.blue {
+    --candle-color: #007bff;
+  }
+  
+  .candle.yellow {
+    --candle-color: #f0c808;
+  }
+  
+  .candle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: var(--wick-height, 50%); /* Adjustable wick height */
+    background-color: inherit;
+  }
+  
+  .candle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: var(--wick-height, 40%);
+    background-color: inherit;
+  }
+  
+  /* Animations */
+  @keyframes flicker {
+    0%, 100% {
+      transform: scaleY(1);
+    }
+    50% {
+      transform: scaleY(1.05);
+    }
+  }
+  
+  @keyframes scrollBackground {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  

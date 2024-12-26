@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trader Room</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <video autoplay muted loop id="background-video">
+    <source src="large.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  
+
+  <div class="profile-container">
+    <img src="Profile Pic Logo.jpg" alt="Trader's Profile Picture" class="profile-pic">
+    <h1 class="trader-name">Trading Room</h1>
+    <p class="trading-bio">
+      Trading Room is a private firm that provides comprehensive guidelines and knowledge across all types of financial markets, such as Forex, Crypto, and Binary.
+    </p>
+    <ul class="services-list">
+      <li>
+        <strong>Binary:</strong> Requires small capital with higher chances of profit. It is a sustainable trading method for the long term if done with proper management.
+      <br></li>
+      <li>
+        <strong>Forex:</strong> We provide precise, setup-based trades on currency pairs and also trade on news events.
+      <br></li>
+      <li>
+        <strong>Crypto:</strong> Get tips and strategies for holding, selling, or trading on all types of cryptocurrencies. We also specialize in planning crypto portfolios.
+      <br></li>
+      <li>
+        <strong>Other...</strong>
+      <br></li>
+    </ul>
+    <p class="trading-bio">
+      Click the link below to access all the services we provide.
+    </p>
+    
+    <!--
+    <div class="affiliate-links">
+      <h2>Affiliate Links:</h2>
+      <a href="https://affiliate-link1.com" target="_blank">Trading App 1</a>
+      <a href="https://affiliate-link2.com" target="_blank">Trading App 2</a>
+      <a href="https://affiliate-link3.com" target="_blank">Trading App 3</a>
+    </div>
+    -->
+    <div class="trading-room">
+      <h2>Trading Room Telegram Channel</h2>
+      <button class="room-link" onclick="openModal()">Join My Trading Room</button>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Welcome to the Trading Room</h2>
+      <p>By joining our trading room, you'll gain access to exclusive financial market insights, real-time updates, and expert advice.</p>
+      <a href="https://t.me/tradenlearnwithsahil" target="_blank" class="room-link">Proceed to Telegram</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
