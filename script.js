@@ -1,9 +1,11 @@
 function openModal() {
-    document.getElementById("modal").style.display = "block";
+    document.getElementById("modal").style.display = "flex";
+    document.body.style.overflow = "hidden";
   }
   
   function closeModal() {
     document.getElementById("modal").style.display = "none";
+    document.body.style.overflow = "auto";
   }
   
   // Close the modal if the user clicks outside of it
