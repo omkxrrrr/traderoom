@@ -115,6 +115,8 @@ body {
 /* Modal styling */
 .modal {
   display: none; /* Hidden by default */
+  justify-content: center; /* Center horizontally */
+  align-items: center;    /* Center vertically */
   position: fixed;
   z-index: 1000;
   left: 0;
@@ -126,14 +128,15 @@ body {
 }
 
 .modal-content {
-  background-color: #fff;
-  color: #333;
+  background-color: rgba(139, 126, 126, 0.2); /* Semi-transparent */
+  color: #ffffff;
   margin: 15% auto;
   padding: 20px;
   border-radius: 10px;
   width: 80%;
   max-width: 400px;
   text-align: center;
+  justify-content: center;
   position: relative;
 }
 
@@ -145,6 +148,7 @@ body {
   font-size: 28px;
   font-weight: bold;
   cursor: pointer;
+  padding-bottom: 14px;
 }
 
 .close:hover,
@@ -164,6 +168,13 @@ body {
 
 .modal-content .room-link:hover {
   background: #005bb5;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 480px) {
+  .modal-content h2 {
+    font-size: calc(14px + 1vw); /* Dynamically adjusts for smaller screens */
+  }
 }
 
 /* Media query for smaller screens */
